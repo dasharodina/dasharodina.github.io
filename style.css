@@ -1,5 +1,10 @@
-ul{
-	list-style-type: square;
-	font-style: italic;
-	color: rgba(76, 175, 80, 0.2);
+blya{
+	font-style: inherit;
+	font-weight: 800;
+	color: #8B0000;
 }
+
+.sent{
+	width: 99%;
+	opacity: 0.9;
+	}
