@@ -1,16 +1,11 @@
-function openNav() {
-  document.getElementById("mySidenav").style.width = "200px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
+var check = false;
 var mywindow = $(window);
 var mypos = mywindow.scrollTop();
 mywindow.scroll(function() {
-       if(mywindow.scrollTop() > mypos)
+       if((mywindow.scrollTop() > mypos) || (check == true))
        {
-           $('#stripe').fadeOut();  
+           $('#stripe').fadeOut();
+           check = false;
        }
        else
        {
@@ -18,11 +13,22 @@ mywindow.scroll(function() {
        }
        mypos = mywindow.scrollTop();
     });
+
+
 jQuery(function($){
 	$(document).mouseup(function (e){
 		var div = $("#mySidenav");
-		if (!div.is(e.target) && div.has(e.target).length === 0) {	    
+		if (!div.is(e.target) && div.has(e.target).length == 0) {	    
 			closeNav();
 		}
 	});
 });
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "200px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  check = true;
+}
