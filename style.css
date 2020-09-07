@@ -9,25 +9,30 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #16a085;
   overflow-x: hidden;
-  transition: 0.2s;
+  transition: 0.5s;
 }
 
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #dadada;
   display: block;
   transition: 0.5s;
+  text-shadow: rgba(255, 255, 255, .1) -5px -5px 5px, rgba(0, 0, 0, .8) 3px 3px 3px;
 }
 
-.sidenav a:hover {
-  color: #f1f1f1;
+a:hover, a:focus {
+    color: white;
+    padding-left: 200px;
+    text-shadow: none;
 }
+
 
 .sidenav .closebtn {
+  color: #dadada;
   position: absolute;
   top: 0px;
   right: 5px;
@@ -55,9 +60,6 @@ hr {
     height: 1px;
     border: 0;
     background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-    background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-    background-image: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 .date{
     color: #696969;
@@ -86,6 +88,9 @@ hr {
   margin-top: 5px;
   padding: 8px 8px 8px 32px;
   font-size: 30px;
-  color: #818181;
+  color: #dadada;
   font-weight: 700;
+  line-height: 1.3em;
+  text-shadow: rgba(255, 255, 255, .1) -5px -5px 5px, rgba(0, 0, 0, .8) 3px 3px 3px;
+}
 }
