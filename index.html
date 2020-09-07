@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link href="style.css" rel="stylesheet">
-	<meta charset="utf-8">
-	<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="miy.js"></script>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<hr/>
-<hr/>
-	<span><center><h2>Личный кабинет</h2></center></span>
-<span style="color:#696969">  <i>04.09.2020 г.  </i></span>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#0409" onclick="closeNav()">04.09.2020</a>
+  <a href="#0109" onclick="closeNav()">01.09.2020</a>
+  <a href="#1108" onclick="closeNav()">11.08.2020</a>
+</div>
+<div id="stripe"><span id="menu" onclick="openNav()">&#9776;</span></div>
+	<div id="title"><center><h2 id="0409">Личный кабинет</h2></center></div>
+<span class="date"> 04.09.2020 г. </span>
 <hr/>
 <div> <strong> Внимание!</strong> <br> Для каждого слушателя центра создан личный кабинет на портале дистанционного обучения ОмГУПС. В личном кабинете размещены материалы для подготовки к ЕГЭ, видеокурс "Основы корпоративной культуры ОАО "РЖД", портфолио, результаты научной деятельности слушателей, психотренинг на ориентацию слушателей целевого направления в цифровом образовательном пространстве и многое другое.<br> <strong> Логин </strong> и <strong> пароль </strong> от кабинета необходимо получить у куратора центра в Вашем городе. </div>
 <hr/>
 <hr/>
-	<span><center><h2>День знаний</h2></center></span>
-<span style="color:#696969">  <i>01.09.2020 г.  </i></span>
+	<span><center><h2 id="0109">День знаний</h2></center></span>
+<span class="date"> 01.09.2020 г. </span>
 <hr/>
 <div class="blya"> ОмГУПС поздравляет с Днём знаний и началом 2020-21 учебного года!<br>
   <br> </div>
@@ -24,11 +30,11 @@
   <br>
 Дорогие друзья, желаем вам успехов в учёбе! Пусть новый учебный год принесёт радость открытий, будет интересным и плодотворным!<br>
   <br> </div>
-<center><img class="sent" src="1сен.jpg"></center>
+<center><img class="sent" src="1sep.jpg"></center>
 <hr/>
 <hr/>
-<span><center><h2>Новостная лента</h2></center></span>
-<span style="color:#696969"> <i> 11.08.2020 г.  </i></span>
+<span><center><h2 id="1108">Новостная лента</h2></center></span>
+<span class="date"> 11.08.2020 г. </span>
 <hr/>
 <div> Данное приложение разработано Омским государственным университетом путей сообщения для  слушателей <strong> Центров довузовской подготовки и профориентации ОАО "РЖД"</strong>. <br> <br> В новостной ленте будут отображаться:
 <ul> 
@@ -39,4 +45,4 @@
 <hr/>
 <hr/>
 </body>
-</html>
+</html> 
