@@ -18,3 +18,11 @@ mywindow.scroll(function() {
        }
        mypos = mywindow.scrollTop();
     });
+jQuery(function($){
+	$(document).mouseup(function (e){
+		var div = $("#mySidenav");
+		if (!div.is(e.target) && div.has(e.target).length === 0) {	    
+			closeNav();
+		}
+	});
+});
