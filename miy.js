@@ -1,3 +1,4 @@
+//for stripe vanish while scrolling
 var check = false;
 var mywindow = $(window);
 var mypos = mywindow.scrollTop();
@@ -13,7 +14,7 @@ mywindow.scroll(function() {
   }
   mypos = mywindow.scrollTop();
 });
-
+//click on empty are close sidebar
 jQuery(function($){
 	$(document).mouseup(function (e){
 		var div = $("#mySidenav");
@@ -25,10 +26,16 @@ jQuery(function($){
 
 function openNav() {
   document.getElementById("mySidenav").style.width = "12.5em";
+  $('#menu').removeClass("animate__slideInDown").addClass("animate__slideOutUp");
+  $('#stripe').hide();
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
+  $('#menu').removeClass("animate__slideOutUp").addClass("animate__slideInDown");
+  $('#stripe').show();
+  document.body.style.backgroundColor = "white";
   check = true;
 }
 
