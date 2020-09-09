@@ -44,7 +44,7 @@ $(function() {
       openNav();
     },
   //Default is 75px, set to 0 for demo so any distance triggers swipe
-  threshold:125
+  threshold:200
   });
 });
 $(function() {      
@@ -55,6 +55,6 @@ $(function() {
       closeNav();
     },
   //Default is 75px, set to 0 for demo so any distance triggers swipe
-  threshold:125
+  threshold:200
   });
 });
