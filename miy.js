@@ -17,7 +17,7 @@ mywindow.scroll(function() {
 jQuery(function($){
 	$(document).mouseup(function (e){
 		var div = $("#mySidenav");
-		if (!div.is(e.target) && div.has(e.target).length == 0) {	    
+		if (!div.is(e.target) && div.has(e.target).length == 0) {
 			closeNav();
 		}
 	});
@@ -35,3 +35,26 @@ function closeNav() {
 setTimeout(function (){
   $('div').removeClass("animate__slideInRight");
 }, 1000);
+
+$(function() {      
+  //Enable swiping...
+  $("body").swipe( {
+    //Generic swipe handler for all directions
+    swipeRight:function(event, direction, distance, duration, fingerCount, fingerData) {
+      openNav();
+    },
+  //Default is 75px, set to 0 for demo so any distance triggers swipe
+  threshold:0
+  });
+});
+$(function() {      
+  //Enable swiping...
+  $("body").swipe( {
+    //Generic swipe handler for all directions
+    swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData) {
+      closeNav();
+    },
+  //Default is 75px, set to 0 for demo so any distance triggers swipe
+  threshold:0
+  });
+});
