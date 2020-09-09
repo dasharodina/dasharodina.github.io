@@ -2,18 +2,17 @@ var check = false;
 var mywindow = $(window);
 var mypos = mywindow.scrollTop();
 mywindow.scroll(function() {
-       if((mywindow.scrollTop() > mypos) || (check == true))
-       {
-           $('#stripe').fadeOut();
-           check = false;
-       }
-       else
-       {
-           $('#stripe').fadeIn();
-       }
-       mypos = mywindow.scrollTop();
-    });
-
+  if((mywindow.scrollTop() > mypos) || (check == true)) {
+    $('#menu').removeClass("animate__slideInDown").addClass("animate__slideOutUp");
+    $('#stripe').fadeOut();
+    check = false;
+  }
+  else {
+    $('#menu').removeClass("animate__slideOutUp").addClass("animate__slideInDown");
+    $('#stripe').fadeIn();
+  }
+  mypos = mywindow.scrollTop();
+});
 
 jQuery(function($){
 	$(document).mouseup(function (e){
@@ -32,3 +31,7 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   check = true;
 }
+
+setTimeout(function (){
+  $('div').removeClass("animate__slideInRight");
+}, 1000);
