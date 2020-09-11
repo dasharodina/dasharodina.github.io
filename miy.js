@@ -1,10 +1,12 @@
 //for stripe vanish while scrolling
+var check = false;//variable for stripe vanish after follow from link to link
 var mywindow = $(window);
 var mypos = mywindow.scrollTop();
 mywindow.scroll(function() {
-  if(mywindow.scrollTop() > mypos){
+  if((mywindow.scrollTop() > mypos) || (check == true)){
     $('#menu').removeClass("animate__slideInDown").addClass("animate__slideOutUp");
     $('#stripe').fadeOut();
+    check = false;
   }
   else {
     $('#menu').removeClass("animate__slideOutUp").addClass("animate__slideInDown");
