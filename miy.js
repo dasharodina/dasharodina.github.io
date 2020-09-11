@@ -1,12 +1,10 @@
 //for stripe vanish while scrolling
-var check = false;
 var mywindow = $(window);
 var mypos = mywindow.scrollTop();
 mywindow.scroll(function() {
-  if((mywindow.scrollTop() > mypos) || (check == true)){
+  if(mywindow.scrollTop() > mypos){
     $('#menu').removeClass("animate__slideInDown").addClass("animate__slideOutUp");
     $('#stripe').fadeOut();
-    check = false;
   }
   else {
     $('#menu').removeClass("animate__slideOutUp").addClass("animate__slideInDown");
@@ -14,7 +12,7 @@ mywindow.scroll(function() {
   }
   mypos = mywindow.scrollTop();
 });
-//click on empty are close sidebar
+//clicks on empty area close sidebar
 jQuery(function($){
 	$(document).mouseup(function (e){
 		var div = $("#mySidenav");
