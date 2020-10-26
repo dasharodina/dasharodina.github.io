@@ -32,6 +32,7 @@ function openNav() {
   //document.getElementById("wrapper").style.textOverflow = "clip";
   //document.getElementById("wrapper").style.marginLeft = "12.5em";
   document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  $(".sent").css('opacity', 0.18);
 }
 
 function closeNav() {
@@ -42,6 +43,7 @@ function closeNav() {
   //document.getElementById("wrapper").style.marginLeft = "0em";
   document.body.style.backgroundColor = "white";
   check = true;
+  $(".sent").css('opacity', 1);
 }
 
 setTimeout(function (){
